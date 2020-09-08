@@ -1,0 +1,47 @@
+.Session {
+    list-style-type: none;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.Session p {
+    margin: 0;
+}
+
+.Session > div {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.type_badge {
+    font-weight: bold;
+    /* width: 25%; */
+}
+
+.session_name {
+    font-weight: bold;
+}
+
+.delete_icon:hover {
+    color: #c0392b;
+}
+
+.ssh_color {
+    color: #f39c12;
+}
+
+.telnet_color {
+    color: #9b59b6;
+}
+
+.rdp_color {
+    color: #34495e;
+}
+
+.vnc_color {
+    color: #c0392b;
+}
+
+.ftp {
+    color: #27ae60;
+}

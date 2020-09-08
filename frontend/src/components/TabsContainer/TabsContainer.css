@@ -1,0 +1,48 @@
+.TabsContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.react-tabs__tab-list {
+    border: 1px solid lightgray;
+    margin: 0;
+    height: 45px;
+}
+
+.react-tabs__tab-panel {
+    flex: 1 1 auto;
+}
+
+.react-tabs__tab {
+    border: 0;
+    border-right: 1px solid lightgray;
+    bottom: 0;
+    padding: 12px 24px;
+    height: 45px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /*Opera/IE 8+*/
+}
+
+.react-tabs__tab--selected {
+    border-radius: 0;
+    border-bottom: 3px solid var(--gold-color);
+    background-color: transparent;
+}
+
+.tabCloseBtn {
+    margin-left: 10px;
+    line-height: 45px;
+}
+
+.tabCloseBtn:hover {
+    color: #c0392b;
+}
+
+.NewTab {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}

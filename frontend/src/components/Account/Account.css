@@ -1,0 +1,44 @@
+.Account {
+    width: 40%;
+    margin: 30px;
+    font-weight: bold;
+}
+
+.Account input {
+    width: 100%;
+    border: 1px solid lightgray;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 15px 0;
+    font-weight: 700;
+}
+
+.Account button {
+    width:  150px;
+    height: 40px;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: var(--gold-color);
+    margin-top: 10px;
+}
+
+.Account div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Account .confirm_input {
+    margin-top: 0;
+}
+
+.Account .password_btns button {
+    width: 100px;
+    margin-left: 20px;
+}
+
+.Account .password_btns button:first-child {
+    background-color: lightgray;
+}

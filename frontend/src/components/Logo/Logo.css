@@ -1,0 +1,16 @@
+.Logo {
+    display: flex;
+    align-items: center;
+    /* height: 45px; */
+  }
+  
+  .Logo img {
+    width: 35px;
+    margin-right: 10px;
+  }
+  
+  .Logo h1 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--light-color)
+  }

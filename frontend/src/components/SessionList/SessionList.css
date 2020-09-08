@@ -1,0 +1,59 @@
+.SessionList {
+    /* height: 100%; */
+    width: 100%;
+}
+
+.session_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 5px;
+    border: 1px solid lightgray;    
+}
+
+.session_icons {
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.session_icons a:active, .session_icons a:visited {
+    color: black;
+}
+
+.session_icons svg {
+    cursor: pointer;
+}
+
+.session_icons svg:hover {
+    color: var(--gold-color);
+}
+
+.SessionList table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.SessionList table tr {
+    border: 1px solid lightgray;
+}
+
+.SessionList table tr:hover {
+    background-color: lightgray;
+}
+
+.SessionList table td {
+    padding: 5px;
+}
+
+.SessionList table td:nth-child(1) {
+    text-align: center;
+}
+
+.SessionList table td:nth-child(3) {
+    padding: 5px 10px;
+    min-width: 14px;
+    empty-cells: show;
+}

@@ -1,0 +1,42 @@
+.ftp_header {
+    padding: 5px 10px;
+    border-bottom: 1px solid grey;
+}
+
+.ftp_header h2 {
+    margin: 0;
+}
+
+.ftp_list {
+    padding: 10px;
+}
+
+.ftp_list table {
+    border-collapse: collapse;
+}
+
+.ftp_list table td, .ftp_list table th {
+    padding: 8px;
+    text-align: center;
+    margin: 5px;
+}
+
+.ftp_list table td {
+    cursor: pointer;
+}
+
+.ftp_list table tbody tr:hover {
+    background-color: lightgray;
+}
+
+.ftp_back_btn {
+    width:  70px;
+    height: 30px;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: var(--gold-color);
+    /* color: var(--light-color); */
+}

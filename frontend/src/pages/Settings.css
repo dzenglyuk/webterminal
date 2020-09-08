@@ -1,0 +1,8 @@
+.settings_title {
+    padding: 9px 15px;
+    border-bottom: 1px solid grey;
+}
+
+.settings_title h2 {
+    margin: 0;
+}

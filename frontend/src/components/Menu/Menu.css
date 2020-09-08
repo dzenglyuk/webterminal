@@ -1,0 +1,32 @@
+.Menu {
+    width: 100%;
+}
+
+.menu_header {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 5px;
+    border: 1px solid lightgray;    
+}
+
+.Menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.Menu ul li {
+    list-style: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 15px 5px;
+    text-align: center;
+    cursor: pointer;
+    border-left: 3px solid white;
+}
+
+.Menu ul li:hover, .Menu ul li.menu_active {
+    background-color: lightgray;
+    border-color: var(--gold-color);
+}

@@ -1,0 +1,82 @@
+:root {
+  --gold-color: #eeb137;
+  --brown-color: #aa812d;
+  --light-color: #fcfcfe;
+  --dark-color: #37373f; 
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-color);
+  font-family: "Roboto", sans-serif;
+  /* overflow: hidden; */
+  /* height: 100vh; */
+}
+
+.form-control {
+  margin-bottom: 1rem;
+}
+
+.form-control input,
+.form-control textarea {
+  outline: 0;
+  background: lightgray;
+  width: 100%;
+  border: 0;
+  margin: 0 0 10px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font: inherit;
+}
+
+.form-control.username {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-control.username input {
+  width: 47%;
+}
+
+.form-actions button {
+  text-transform: uppercase;
+  outline: 0;
+  background: var(--gold-color);
+  font-weight: bold;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: whitesmoke;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.btn {
+  background-color: var(--gold-color);
+  font: inherit;
+  border: 1px solid var(--gold-color);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+  color: whitesmoke;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0;
+  text-decoration: none;
+} 
+
+.form-actions button:hover,
+.form-actions button:active,
+.btn:hover,
+.btn:active {
+  background-color: var(--gold-color);
+  border-color: var(--gold-color);
+}

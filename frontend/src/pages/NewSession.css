@@ -1,0 +1,78 @@
+.NewSession {
+    min-width: 560px;
+    max-width: 740px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.session_title {
+    border: 1px solid lightgray;
+    border-bottom: 0;
+    padding: 20px;
+}
+
+.session_title h1 {
+    margin: 0;
+}
+
+.session_inputs {
+    border: 1px solid lightgray;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.session_inputs input, .session_inputs select {
+    width: 100%;
+    border: 1px solid lightgray;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px 0;
+}
+    
+.session_inputs .top {
+    display: flex;
+    width: 100%;
+}
+
+.session_inputs .top div:first-child {
+    margin-right: 20px;
+    width: 60%;
+    /* border: 1px solid black; */
+}
+
+.session_inputs .top div:nth-child(2) {
+    width: 40%;
+    /* border: 1px solid black;     */
+}
+
+.session_inputs .bottom {
+    width: 100%;
+}
+
+.session_controls {
+    border: 1px solid lightgray;
+    padding: 20px;
+    border-top: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cancel_btn, .create_btn {
+    width:  80px;
+    height: 40px;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--light-color);
+}
+
+.cancel_btn {
+    background-color: grey;
+    margin-right: 10px;
+}
+
+.create_btn {
+    background-color: var(--gold-color);
+}
