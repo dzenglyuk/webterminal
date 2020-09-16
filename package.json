@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dzenglyuk/thequizzer.git"
+    "url": "git+https://github.com/dzenglyuk/webterminal.git"
   },
   "author": "Oleh Dzenhliuk",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dzenglyuk/thequizzer/issues"
+    "url": "https://github.com/dzenglyuk/webterminal/issues"
   },
-  "homepage": "https://github.com/dzenglyuk/thequizzer#readme",
+  "homepage": "https://github.com/dzenglyuk/webterminal#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
