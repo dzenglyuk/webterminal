@@ -12,11 +12,11 @@ class SSH extends Component {
     async componentDidMount() {
         const protocol = window.location.protocol === "https:" ? "wss://" : "ws://";
         let socketURL =
-        protocol +
-        window.location.hostname +
-        // (window.location.port ? ":" + 8000 : "") +
-        ":8000" +
-        "/ssh/";
+            protocol +
+            window.location.hostname +
+            // (window.location.port ? ":" + 8000 : "") +
+            ":8000" +
+            "/ssh/";
 
         const term = new Terminal({ cursorBlink: true });
         const fitAddon = new FitAddon();
@@ -24,7 +24,7 @@ class SSH extends Component {
         term.open(this.termElm);
         fitAddon.fit();
         let sshId = this.props.openedSSH.find((el) => {
-            if (el.id === this.props.session._id){
+            if (el.id === this.props.session._id) {
                 return el;
             }
         });
@@ -41,7 +41,7 @@ class SSH extends Component {
         }
 
         socketURL += sshId;
-        
+
         const socket = new WebSocket(socketURL);
 
         socket.onopen = () => {
@@ -51,24 +51,22 @@ class SSH extends Component {
         };
         this.term = term;
     }
-       // componentWillUnmount() {
-        //     this.props.closeSession(this.props.session._id);
-        // }
-        render() {
-            return (
-                <div className="Terminal">
-                    <div ref={(ref) => (this.termElm = ref)}></div>
-                </div>
-            );
-        }
+    // componentWillUnmount() {
+    //     this.props.closeSession(this.props.session._id);
+    // }
+    render() {
+        return (
+            <div className="Terminal">
+                <div ref={(ref) => (this.termElm = ref)}></div>
+            </div>
+        );
+    }
 }
 
 const mapStateToProps = (state) => ({
     openedSSH: state.openedSSH
 });
 
-const matchDispatchToProps = (dispatch) => {
-    return bindActionCreators({ openSession: openSession, closeSession: closeSession }, dispatch);
-};
+const matchDispatchToProps = { openSession, closeSession };
 
 export default connect(mapStateToProps, matchDispatchToProps)(SSH);

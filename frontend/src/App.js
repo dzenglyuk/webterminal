@@ -56,7 +56,7 @@ class App extends Component {
               }}
             >
               <div className={this.state.token && "App"}>
-                {this.state.token ? <SideBar user={this.state.username} changeActiveSession={this.changeActiveSession}/> : <Header />}
+                {this.state.token ? <SideBar user={this.state.username} changeActiveSession={this.changeActiveSession} /> : <Header />}
                 <main className="main-content">
                   <BackGround />
                   <Switch>
@@ -66,10 +66,10 @@ class App extends Component {
                       <Route path="/auth" component={AuthPage} />
                     )}
                     {this.state.token && (
-                      <Route path="/home" component={TabsContainer} activeSession={this.state.activeSession}/>
+                      <Route path="/home" component={TabsContainer} activeSession={this.state.activeSession} />
                     )}
                     {this.state.token && (
-                      <Route path="/settings" component={Settings}/>
+                      <Route path="/settings" component={Settings} />
                     )}
                     <Redirect from="*" to="/auth" />
                   </Switch>
@@ -81,6 +81,16 @@ class App extends Component {
       </BrowserRouter>
     );
   }
+}
+
+const WrappedRoute = (ComponentForWrap) => {
+  return React.memo((props) => {
+    const isAuth = getIsAuth();
+
+    if (!isAuth) return <Redirect to="/auth" />;
+
+    return <ComponentForWrap {...props} />
+  })
 }
 
 export default App;

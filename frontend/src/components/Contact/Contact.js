@@ -6,7 +6,7 @@ class Contact extends Component {
     state = {
         status: ""
     };
-    
+
     static contextType = AuthContext;
 
     submitForm = (event) => {
@@ -14,6 +14,7 @@ class Contact extends Component {
         const form = event.target;
         const data = new FormData(form);
         const xhr = new XMLHttpRequest();
+        // axios + defaults
         xhr.open(form.method, form.action);
         xhr.setRequestHeader("Accept", "application/json");
         xhr.onreadystatechange = () => {
@@ -29,19 +30,19 @@ class Contact extends Component {
     }
 
     render() {
-        const {status} = this.state;
+        const { status } = this.state;
         return (
             <div className="Contact">
                 <form
                     onSubmit={this.submitForm}
                     action="https://formspree.io/mjvaegeg"
                     method="POST">
-                    <input type="hidden" name="email" value={this.context.email}/>
+                    <input type="hidden" name="email" value={this.context.email} />
                     <label htmlFor="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Write a subject of the email"/>
+                    <input type="text" id="subject" name="subject" placeholder="Write a subject of the email" />
                     <label htmlFor="message">Message</label>
                     <textarea id="message" name="message" placeholder="Write something.." rows="10"></textarea>
-                    {status === "SUCCESS" ? <p>Thanks!</p> : <input type="submit" value="Submit"/>}
+                    {status === "SUCCESS" ? <p>Thanks!</p> : <input type="submit" value="Submit" />}
                     {status === "ERROR" && <p>Ooops! There was an error.</p>}
                 </form>
             </div>
