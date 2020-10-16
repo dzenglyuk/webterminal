@@ -17,10 +17,19 @@ class SessionList extends Component {
   componentDidMount() {
     this.fetchSessions();
   }
-  editHandler = () => {
+  editHandler = () => { //handleSetIsEdit
     this.setState((state) => ({ edit: !state.edit }));
   };
-  fetchSessions = () => {
+
+  // bool = is*
+  // data (array, string, number, object, ...etc) = get*
+  // event HANDLER = handle*
+  // event HANDLER as PROP = on*
+  // set smth = set*
+  // request: fetch / perform*Request
+  // request + react / redux, etc. events = HANDLE
+
+  fetchSessions = () => { //handleFetchSessions
     const requestBody = {
       query: `
                   query {
@@ -68,7 +77,7 @@ class SessionList extends Component {
           <span> Sessions: </span>
           <span className="session_icons">
             <FontAwesomeIcon icon={faTrashAlt} onClick={this.editHandler} />
-            <FontAwesomeIcon icon={faPlusSquare} onClick={() => {this.props.setTab(this.props.activeSessions.length+1)}}/>
+            <FontAwesomeIcon icon={faPlusSquare} onClick={() => { this.props.setTab(this.props.activeSessions.length + 1) }} />
           </span>
         </div>
         <table>
@@ -80,7 +89,7 @@ class SessionList extends Component {
                     session={session}
                     key={session._id}
                     edit={this.state.edit}
-                    // changeActiveSession={this.props.changeActiveSession}
+                  // changeActiveSession={this.props.changeActiveSession}
                   />
                 );
               })}

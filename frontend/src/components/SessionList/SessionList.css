@@ -3,6 +3,10 @@
     width: 100%;
 }
 
+/* .session-list .session-list__header{
+    color: var(--test-itesdasdads);
+} */
+
 .session_header {
     display: flex;
     align-items: center;

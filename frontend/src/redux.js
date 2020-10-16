@@ -1,4 +1,5 @@
 import { createStore } from "redux";
+import { createAction } from 'redux-actions';
 
 const initialState = {
   terminalOpened: false,
@@ -10,12 +11,9 @@ const initialState = {
   openedSSH: []
 };
 
-export const openTerminal = (process) => {
-  return {
-    type: "TERMINAL_OPENED",
-    payload: process,
-  };
-};
+const TERMINAL_OPENED = "process/TERMINAL_OPENED";
+
+export const openTerminal = createAction(TERMINAL_OPENED, process => process);
 
 export const setSessions = (sessions) => {
   return {
@@ -52,12 +50,9 @@ export const changeMenuTab = (tab) => {
   };
 };
 
-export const openSession = (id, sshId) => {
-  return {
-    type: "OPEN_SESSION",
-    payload: { id: id, sshId: sshId }
-  };
-};
+export const openSession = createAction("OPEN_SESSION", (id, sshId) => ({ id, sshId }));
+
+const replaceElement = (arr, newData, dataId) => arr.map(item => item.id == dataId ? { ...item, ...newData } : item);
 
 export const closeSession = (id) => {
   return {
@@ -68,7 +63,7 @@ export const closeSession = (id) => {
 
 export const process = (state = initialState, action) => {
   switch (action.type) {
-    case "TERMINAL_OPENED":
+    case TERMINAL_OPENED:
       return {
         ...state,
         terminalOpened: true,
@@ -83,7 +78,7 @@ export const process = (state = initialState, action) => {
       return {
         ...state,
         activeSessions: [...state.activeSessions, action.payload],
-        activeTab: state.activeSessions.length+1
+        activeTab: state.activeSessions.length + 1
       };
     case "DEACTIVATE_SESSION":
       return {
@@ -109,7 +104,7 @@ export const process = (state = initialState, action) => {
       return {
         ...state,
         openedSSH: state.openedSSH.filter(session => session._id !== action.payload)
-      };  
+      };
     default:
       return state;
   }
